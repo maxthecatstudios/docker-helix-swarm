@@ -2,7 +2,7 @@
 # This docker files was built by the Perforce Software Swarm team to demo   #
 # Swarm in a docker environment.                                            #
 # ========================================================================= #
-version: '2'
+version: '2.1'
 
 services:
   helix.base:
