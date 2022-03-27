@@ -32,6 +32,8 @@ services:
      - P4D_PORT=${P4D_PORT:-ssl:helix.p4d:1666}
     hostname: helix-swarm
     domainname: helix
+    container_name: helix_swarm
+    restart: unless-stopped
     volumes:
       - ./storage/swarm-data:/opt/perforce/swarm/data
       - ./storage/file:/opt/perforce/etc/file
@@ -47,6 +49,8 @@ services:
     image: "redis"
     hostname: helix.redis
     domainname: helix
+    container_name: helix_swarm_redis
+    restart: unless-stopped
     
     command: redis-server --protected-mode no --port 7379 --appendonly yes
     
