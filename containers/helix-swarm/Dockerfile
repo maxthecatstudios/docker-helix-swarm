@@ -17,13 +17,13 @@ RUN \
 
 
 # P4D configuration
-ENV P4D_PORT            "ssl:perforce:1666"
-ENV P4D_SUPER           "super"
-ENV P4D_SUPER_PASSWD    "HelixDockerBay94"
+ENV P4D_PORT            "ssl:10.0.10.10:1666"
+ENV P4D_SUPER           "sourcegraph"
+ENV P4D_SUPER_PASSWD    "********"
 
 # Swarm configuration
-ENV SWARM_USER          "swarm"
-ENV SWARM_PASSWD        "HelixDockerBay94"
+ENV SWARM_USER          "sourcegraph"
+ENV SWARM_PASSWD        "********"
 ENV SWARM_MAILHOST      "localhost"
 ENV SWARM_HOST          "helix.swarm"
 ENV SWARM_REDIS         "redis"
